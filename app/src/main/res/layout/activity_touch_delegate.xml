@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_touch_delegate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.xuliwen.viewtest.viewevent.touchdelegate.TouchDelegateActivity">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="touchDelegate的事件传递研究"
+    android:onClick="toTouchDelegateViewEventTest"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="touchDelegate的标准使用方法，绑定到父View，绑定到父View的父View"
+        android:onClick="toTouchStandard"/>
+
+</LinearLayout>

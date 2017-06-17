@@ -1,0 +1,24 @@
+1. 作用：
+LayoutParams是View用来告诉它的父控件如何放置自己的
+
+2. 标志：
+所有以”layout_”开头的属性都是LayoutParams的
+
+3.
+1）基类LayoutParams（也就是ViewGroup.LayoutParams）仅仅描述了这个View想要的宽度和高度，即其子View只能指定
+layout_width和layout_height属性
+2）不同ViewGroup的继承类对应着不同的ViewGroup.LayoutParams的子类
+
+4.
+通过代码设置TextView的LayoutParams
+
+5.
+绝大部分容器控件都是直接继承ViewGroup.MarginLayoutParams而非ViewGroup.LayoutParams
+
+6.自定义LayoutParams
+请查看FlowLayout.java如何自定义LayoutParams
+步骤：
+1）继承MarginLayoutParams，实现4个构造方法
+2）重写四个重要方法
+3）为xml属性设置get，set方法
+

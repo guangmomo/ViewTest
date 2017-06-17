@@ -1,0 +1,17 @@
+学习到的新知识
+1. 提供set,get方法，这样可以在java中动态改变View
+
+2. 设置为gone的子View，onMeasure，onLayout直接跳过，所以设置为gone的子View的getMeasureWidth()，getWidth()都为0
+
+3. 处理gravity和layout_gravity
+
+4. 自定义LayoutParams
+
+5. 一些细节：
+防抖动   mDividerPaint.setDither(true);
+执行onDraw  this.setWillNotDraw(false);
+
+6. onMeasure()多次执行的情景
+
+7. requestLayout(),postInvalidate,Invalidate的作用
+

@@ -1,0 +1,27 @@
+1)
+子View 的public final void measure(int 子View的widthMeasureSpec, int 子View的heightMeasureSpec)
+这个方法是final类型，所以不管是View，还是ViewGroup调用measure()的时候，调用的都是这个方法，这个方法最终会调用View的onMeasure()方法
+
+2)
+View的onMeasure(int 自身的widthMeasureSpec, int 自身的heightMeasureSpec)
+（1）
+这个方法里面通过调用setMeasureDimension(widthSpecSize, heightSpecSize)来最终设置View的MeasureWidth，MeasureHeight。
+在这个方法后，可以调用getMeasureWidth()
+（2）
+要处理wrap_content的情况，判断条件是specMode==MeasureSpec.AT_MOST
+
+3）
+对应View，onMeasure完成自身的测量
+对应ViewGroup，onMeasure先完成子View的测量，再完成自身测量
+
+4）
+onMeasure中的测量是确定specSize，自身的specMode早已在onMeasure之前就由ViewGroup的geChildMeasureSpec确定下来了
+
+5）自定义ViewGroup的时候测量子View有两种方法
+//会将子View的margin，父View的padding算进去。优点：使子View支持layout_margin属性
+measureChildWithMargins(child, widthMeasureSpec, widthUsed, heightMeasureSpec, heightUsed)
+
+//只会将父View的padding算进去，子View不支持layout_margin属性
+measureChildren(int widthMeasureSpec, int heightMeasureSpec)
+
+

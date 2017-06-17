@@ -1,0 +1,1 @@
+1. onMeasure,onLayout,onDraw都会有可能被执行多次

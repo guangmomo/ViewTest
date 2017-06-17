@@ -1,0 +1,11 @@
+draw的流程：
+1）ViewRootIml调用performDraw开始draw过程
+2）DecorView的draw被调用开始View的draw过程
+
+  draw的作用如下：
+  2.1）画背景（drawBackground()）
+  2.2）画自己（调用自己的onDraw()）
+  2.3）画子View（通过dispatchDraw()去调用子View的draw）
+  2.4）画装饰（onDrawScrollBars，例如：滚动条）
+
+  onDraw()的作用仅仅是画自己

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorAccent"
+    android:orientation="horizontal"
+
+    android:layout_width="300dp"
+    android:layout_height="300dp">
+<TextView
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:id="@+id/notify_textView"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/notify_imageView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/open_activity"
+        android:text="open_NotificationTestActivity"/>
+</LinearLayout>

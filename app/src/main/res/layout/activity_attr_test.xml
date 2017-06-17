@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_attr_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.xuliwen.viewtest.attr.AttrTestActivity">
+
+    <com.xuliwen.viewtest.attr.People
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:name="徐立文"
+        app:peopleHeight="175.6"
+        app:age="22"
+        app:appearance="handsome"
+        app:skinColor="#333333"
+        app:head="@drawable/test"
+        app:isStudent="true"
+        android:height="176dp"
+        android:text="我是徐立文，今天22岁"
+        app:language="chinese|english|japanese"
+        app:headWidth="match_parent"
+        />
+
+    <com.xuliwen.viewtest.attr.Dog
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:name="小狗狗"
+        app:age="3"/>
+
+    <com.xuliwen.viewtest.attr.ViewConstructorTest
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:attr1="attr1 form xml"
+        app:attr2="attr2 form xml"
+        app:attr3="attr3 form xml"
+        style="@style/XmlStyle"
+        />
+
+</RelativeLayout>

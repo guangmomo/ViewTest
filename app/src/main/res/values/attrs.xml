@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--people和dog共用的属性写在declare-styleable标签外面-->
+    <attr name="name" format="string"/>
+    <attr name="age" format="integer"/>
+
+    <declare-styleable name="people" >
+
+        <!--使用共用的属性-->
+        <attr name="name" />
+        <attr name="age" />
+
+
+        <!--当一个属性，定义了format的时候，它就是一个新的属性，如果没有定义format，
+        就是引用已定义的属性，下面定义height属性会出现编译错误，因为跟系统属性height重名了，
+        所以属性名在整个项目中不能重复（包括系统属性，自定义属性，第三方库的属性）-->
+       <!-- <attr name="height" format="float"/>-->
+
+        <!--没有定义format，所以是引用了系统的height属性，引用系统的属性要加上android:-->
+        <attr name="android:height"/>
+
+        <!--没有定义format，所以是引用了系统的text属性，引用系统的属性要加上android:-->
+        <attr name="android:text"/>
+
+        <attr name="peopleHeight" format="float"/>
+
+        <attr name="appearance">               <!--没有指定enum的类型，appearance的属性值只能是handsome，clown其中之一-->
+            <enum name="handsome" value="0"/>  <!--enum只能是整数类型-->
+            <enum name="clown" value="1"/>
+        </attr>
+
+        <attr name="skinColor" format="color">   <!--指明了color类型，那么skinColor的值除了使用yellow，black，white外，还可以使用其他16进制表示的颜色值-->
+            <enum name="yellow" value="0xFFCC00"/>
+            <enum name="black" value="0x000000"/>
+            <enum name="white" value="0xFFFFFF"/>
+        </attr>
+
+        <attr name="head" format="reference"/>  <!--引用一个resourceId，所以reference的值实际上是整型-->
+
+        <attr name="isStudent" format="boolean"/>
+
+        <attr name="language">                  <!--flag的取值规律为2的n次方，这样才可以用&来判断是否含有这个标志位-->
+            <flag name="chinese" value="0x1"/>
+            <flag name="english" value="0x2"/>
+            <flag name="japanese" value="0x4"/>
+        </attr>
+
+        <!--match_parent的值若使用正数，就有可能跟某个dp值起冲突，所以使用负数-->
+        <attr name="headWidth" format="dimension">
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+
+
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="dog">
+
+        <!--使用共用的属性-->
+        <attr name="name" />
+        <attr name="age" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewConstructorTest">
+        <attr name="attr1" format="string"/>
+        <attr name="attr2" format="string"/>
+        <attr name="attr3" format="string"/>
+        <attr name="attr4" format="string"/>
+        <attr name="attr5" format="string"/>
+        <attr name="attr6" format="string"/>
+    </declare-styleable>
+
+    <attr name="defStyleAttrTest" format="reference"/>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="cTextSize" format="dimension"/>
+        <attr name="cTextContent" format="string"/>
+        <attr name="cTextColor" format="color"/>
+    </declare-styleable>
+    
+    <declare-styleable name="CustomImageView">
+        <attr name="titleText" format="string"/>
+        <attr name="titleSize" format="dimension"/>
+        <attr name="imageResource" format="reference"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="imageScaleType">
+            <enum name="fillXY" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircleView">
+        <attr name="invalidateTime" format="integer"/> <!--圆弧度数加1的间隔时间-->
+    </declare-styleable>
+
+
+    <declare-styleable name="FlowLayout">
+        <attr name="android:gravity"/>
+        <attr name="horizontalSpacing" format="dimension|reference"/>
+        <attr name="verticalSpacing" format="dimension|reference"/>
+        <attr name="dividerColor" format="color|reference"/>
+        <attr name="dividerWidth" format="dimension|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout_Layout">
+        <attr name="android:layout_gravity"/>
+    </declare-styleable>
+
+    <string-array name="nameArray">
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+        <item >徐立文</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,39 @@
+http://blog.csdn.net/mybeta/article/details/39993449
+http://blog.csdn.net/mybeta/article/details/39962235
+
+1.  四个构造函数
+    public ViewConstructorTest(Context context) {
+        super(context);
+    }
+
+    public ViewConstructorTest(Context context, AttributeSet attrs) {//在super中会调用第三个构造函数
+        super(context, attrs);
+    }
+
+    public ViewConstructorTest(Context context, AttributeSet attrs, int defStyleAttr) {//在super中会调用第四个构造函数
+        super(context, attrs, defStyleAttr);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)  //在super中会调用第一个构造函数
+    public ViewConstructorTest(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+
+2.
+public TypedArray obtainStyledAttributes (AttributeSet set, int[] attrs, int defStyleAttr, int defStyleRes)
+
+set：在XML中明确写出了的属性集合。（比如android:layout_width、android:text="@string/hello_world"这些）
+attrs：需要在上面的set集合中查询哪些内容。如果是自定义View，一般会把自定义的属性写在declare-styleable中，代表我们想查询这些自定义的属性值。
+defStyleAttr：这是一个定义在attrs.xml文件中的attribute。这个值起作用需要两个条件：1. 值不为0；2. 在Theme中使用了（出现即可）。
+defStyleRes：这是在styles.xml文件中定义的一个style。只有当defStyleAttr没有起作用，才会使用到这个值。
+
+3.
+View中的属性有多处地方可以设置值，这个优先级是：
+1）直接在XML布局文件中设置的值优先级最高，如果这里设置了值，就不会去取其他地方的值了。
+2）XML布局文件中有一个叫“style”的属性，它指向一个style，在这个style中设置的属性值优先级次之。
+3）如果上面两个地方都没有设置值，那么就会根据View带三个参数的构造方法中的第三个参数attribute指向的style设置值，前提是这个attribute的值不为0。
+4）如果上面的attribute设置为0了，我们就根据obtainStyledAttributes()方法中的最后一个参数指向的style来设置值。
+5）如果仍然没有设置到值，就会用theme中直接设置的属性值，而不会去管第3步和第4步中是否设置了值。
+
+必须要注意：要想让View构造方法的第三个参数生效，必须让它出现在我们自己的Application或者Activity的android:theme所指向的style中。设置Activity的theme一样可以。

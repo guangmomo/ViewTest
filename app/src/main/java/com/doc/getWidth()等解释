@@ -1,0 +1,14 @@
+1.
+getMeasureWidth(),getMeasureHeight()
+含义：View的测量宽高
+确定时间：在onMeasure()后确定
+使用场景：在onLayout中使用
+
+
+getWidth(),getHeight()
+含义：View的最终宽高
+确定时间：在onLayout()后确定
+使用场景：除了onLayout之外，都使用这两个方法去获取View的宽，高
+
+联系：
+一般情况下View的测量宽高等于View的最终宽高

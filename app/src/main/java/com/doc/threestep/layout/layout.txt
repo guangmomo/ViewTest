@@ -1,0 +1,23 @@
+（1）layout(自身的l，自身的t，自身的r，自身的b)中调用setFrame（l，t，r，b）确定自身的的四个顶点位置，setFrame中完成顶点的赋值操作，即
+mLeft=l；
+mTop=t;
+mRight=r;
+mBottom=b;
+
+（2）layout()中调用onLayout（changed，自身的l，自身的t，自身的r，自身的b）来确定子View的位置
+
+（3）onLayout()中会计算子View的left，top，如LinearLayout的onLayout()会调用layoutVertical()（这里面会计算子View的left，top），然后调用setChildFrame（child，left，top，width，height）（这里的width，height就是测量宽，高），里面最终调用
+child.layout(left, top, left+width, top+height)，最终确定了child的位置
+
+
+（4）
+View的getLeft()，getWidth()使用的是第1步赋值的mLeft
+View.getLeft()：return mLeft;
+View.getWidth()：retrun mRight-mLeft
+
+
+（5）
+因为一般情况下不会去重写View的layout方法，所以子View的位置是由父View调用child.layout()决定的
+layout（）确定View的位置
+onLayout（）确定子View的位置
+所以ViewGroup才有必要重写onLayout（），，layout（）一般不重写

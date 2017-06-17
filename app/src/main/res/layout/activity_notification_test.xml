@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/activity_notification_test1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.xuliwen.viewtest.notification.NotificationTestActivity">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="普通通知"
+    android:onClick="commonNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="intent通知"
+        android:onClick="intentNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="更新通知"
+        android:onClick="updateNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="删除通知"
+        android:onClick="deleteNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="自定义通知"
+        android:onClick="customNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="确定进度的进度条通知"
+        android:onClick="ensureProgressBarNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="不确定进度的进度条通知"
+        android:onClick="notEnsureProgressBarNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="浮动通知"
+        android:onClick="floatNotification"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="折叠通知"
+        android:onClick="foldingNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="锁屏和非锁屏的通知"
+        android:onClick="lockNotification"/>
+        android:onClick="lockNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="大视图通知"
+        android:onClick="bigShowNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="测试通知的震动，声音，呼吸灯"
+        android:onClick="testSoundNotification"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="测试PendingIntent的标记位1"
+        android:onClick="pendingIntentTest1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="测试PendingIntent的标记位2"
+        android:onClick="pendingIntentTest2"/>
+
+
+</LinearLayout>
+</ScrollView>

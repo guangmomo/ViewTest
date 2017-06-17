@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="8dp"
+    >
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="8dp"-->
+    <!--&gt;-->
+
+    <!--gravity控制所有子View的整体位置，-->
+    <com.xuliwen.viewtest.customview.customviewgroup.flowlayout.FlowLayout
+        android:id="@+id/flow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#6A6A6A"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        app:horizontalSpacing="20dp"
+        app:verticalSpacing="12dp"
+        app:dividerColor="#cccccc"
+        app:dividerWidth="2dp"
+        >
+
+        <!--layout_gravity控制子View在一行中的位置，因为子View
+        在一行中是水平排列的，所以layout_gravity只支持竖直方向的位置
+        这跟LinearLayout类似，若LinearLayout设置为vertical，则
+        那么layout_gravity的竖直方向上的属性值是无效的-->
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/text_style_01"
+            android:text="再见这群菜"
+            android:layout_gravity="top"
+            android:layout_height="60dp"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="I wanna say goodbye"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:layout_width="wrap_content"
+            android:layout_gravity="top"
+            android:text="再见"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="I wanna a new life"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="只想拿个首胜"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="就跪到了现在"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="再见这"
+
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="小学生"
+            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="充斥的时代"
+            android:layout_gravity="bottom"
+
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="总有人"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="秒选亚索"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="看谁"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="都是菜"
+            android:layout_gravity="bottom"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="谁知送完一血"
+            />
+
+        <TextView
+            style="@style/text_style_01"
+            android:text="就说拜拜"
+            />
+    </com.xuliwen.viewtest.customview.customviewgroup.flowlayout.FlowLayout>
+
+
+    <!--</ScrollView>-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="requestLayout"
+        android:onClick="toRequestLayout"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="invalidate"
+        android:onClick="toInvalidate"/>
+
+
+</LinearLayout>

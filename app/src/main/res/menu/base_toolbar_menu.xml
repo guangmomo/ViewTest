@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="搜索"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="menu_notifications"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_qq"
+        android:icon="@drawable/ic_qq"
+        android:title="QQ"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_nana"
+        android:icon="@drawable/ic_nana"
+        android:title="menu_nana"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_chrome"
+        android:icon="@drawable/ic_chrome"
+        android:title="menu_chrome"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_vc"
+        android:icon="@drawable/ic_vc"
+        android:title="menu_vc"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_word"
+        android:icon="@drawable/ic_word"
+        android:title="menu_word"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_subline"
+        android:icon="@drawable/ic_subline"
+        android:title="menu_subline"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_item1"
+        android:title="item_01"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_item2"
+        android:title="item_02"
+        app:showAsAction="never" />
+</menu>

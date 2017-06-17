@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-atuo"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_custom_view_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.xuliwen.viewtest.viewevent.customveiweventtest.ViewEventTestActivity">
+<com.xuliwen.viewtest.viewevent.customveiweventtest.CustomRectViewGroup
+    android:id="@+id/rect1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <com.xuliwen.viewtest.viewevent.customveiweventtest.View1
+       android:id="@+id/view1"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:background="@color/colorAccent"/>
+   <com.xuliwen.viewtest.viewevent.customveiweventtest.View2
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:background="@color/colorAccent"/>
+   <com.xuliwen.viewtest.viewevent.customveiweventtest.View3
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:background="@color/colorAccent"/>
+   <com.xuliwen.viewtest.viewevent.customveiweventtest.View4
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:background="@color/colorAccent"/>
+
+</com.xuliwen.viewtest.viewevent.customveiweventtest.CustomRectViewGroup>
+</RelativeLayout>

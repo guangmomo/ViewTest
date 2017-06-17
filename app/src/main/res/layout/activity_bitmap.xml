@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="decodeFromRes"
+    android:onClick="decodeFromRes"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeFromInputStream"
+        android:onClick="decodeFromInputStream"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeFromFile"
+        android:onClick="decodeFromFile"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeFromByteArray"
+        android:onClick="decodeFromByteArray"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeFromFD"
+        android:onClick="decodeFromFD"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeSampleFromFD"
+        android:onClick="decodeSampleFromFD"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeSampleFromRes"
+        android:onClick="decodeSampleFromRes"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeSampleFromFile"
+        android:onClick="decodeSampleFromFile"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="decodeSampleFromByteArray"
+        android:onClick="decodeSampleFromByteArray"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="recycleBitmap"
+        android:onClick="recycleBitmap"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打印屏幕信息"
+        android:onClick="printDisplayMetrics"/>
+
+
+
+
+    <ImageView
+        android:background="@color/colorAccent"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:id="@+id/bitmap_test_imageView"/>
+
+</LinearLayout>
+
+</ScrollView>
