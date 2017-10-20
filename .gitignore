@@ -12,6 +12,8 @@ proguard/*
 .DS_Store
 /build
 /captures
+/gradle
+/.gradle
 
 
 #built application files
@@ -55,6 +57,7 @@ Thumbs.db
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
 build/
+/.idea
 
 #NDK
 obj/
