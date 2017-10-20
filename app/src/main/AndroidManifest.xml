@@ -103,15 +103,19 @@
 
         </activity>
         <activity android:name=".imageloader.photowall.PhotoWallActivity">
+           
+        </activity>
+
+        <activity android:name=".bitmap.BitmapActivity">
+
+        </activity>
+        
+        <activity android:name=".viewpager.FragmentStateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name=".bitmap.BitmapActivity">
-
         </activity>
     </application>
 
