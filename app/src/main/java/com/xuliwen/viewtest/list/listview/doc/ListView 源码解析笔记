@@ -1,0 +1,51 @@
+1. 第一次layout：
+1）ListView的childCount为0， 所以fillActiveViews()无效
+
+2）fillDown()用while()循环对子View从上到下layout
+while()的条件： 如果子元素到ListView顶部的距离 < ListView的高  &&  当前子元素的position < 子元素的总数
+
+3）makeAndAddView()
+此时mActiveViews为空，就调用obtainView
+
+4）obtainView
+此时mScrapView为空，会调用mAdapter.getView(position, null, this)  来inflate一个新View
+
+5）setupChild
+调用addViewInLayout()将子View添加到ListView中
+
+
+
+
+2. 第二次layout
+1）ListView的childCount不为0， 所以fillActiveViews()会将所有子View（也就是一屏幕的子View）缓存到mActiveViews中
+2）调用detachAllViewsFromParent()将所有子View detach
+3）调用fillSpecific（作用及原理与fillDown相同）
+
+4）makeAndAddView()
+此时mActiveViews不为空，就会从mActiveViews取出对应位置的子View
+
+5）setupChild
+通过attachViewToParent()将子View添加到ListView中
+
+
+
+3. 滑动
+1）监听MotionEvent.ACTION_MOVE
+
+2）向上滑动：如果第一个子View的Bottom < ListView的Top，
+   向下滑动：如果最后一个子View的Top > ListView的Bottom
+ 就说明该子View已经移出了屏幕，会将子View添加到mScrapView中，子View会从ListView detach掉
+ 
+3）调用offsetChildrenTopAndBottom()来移动每一个子View的位置， 会调用ListView的onLayout
+4）调用invalidate()刷新界面，会调用ListView的onDraw
+
+
+4. 总结：
+1) 第一次进入ListView的时候会进行两次绘制（即调用两次 onMeasure -> onLayout -> onDraw）
+
+2）ListView缓存有三个：
+View[] mActiveViews                    只在第一次进入ListView的时候使用
+ArrayList<View>[] mScrapViews          缓存废弃的item，ListView一种type对应数组中的一个元素
+ArrayList<View> mCurrentScrap         
+ 
+3）从Scrap中取出缓存的时候，会取最后一个缓存
