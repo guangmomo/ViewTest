@@ -10,4 +10,8 @@ public class L {
     public static void log(String content){
         Log.e("ViewTest",content);
     }
+
+    public static void log(String tag, String content){
+        Log.e(tag, content);
+    }
 }

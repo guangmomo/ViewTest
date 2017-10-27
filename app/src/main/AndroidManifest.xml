@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xuliwen.viewtest">
+          package="com.xuliwen.viewtest">
 
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- 使用SYSTEM_ALERT_WINDOW时必须要加 -->
     <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
@@ -16,106 +16,101 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".attr.AttrTestActivity" />
-        <activity android:name=".customview.customtextview.CustomTextViewActivity" />
-        <activity android:name=".customview.customimageview.CustomImageViewActivity" />
-        <activity android:name=".customview.CustomViewActivity" />
-        <activity android:name=".customview.customcircleview.CustomCircleActivity" />
-        <activity android:name=".customview.customviewgroup.rectviewgroup.CusRectGroupActivity" />
-        <activity android:name=".customview.customviewgroup.flowlayout.layoutparams.LayoutParamsTestActivity" />
-        <activity android:name=".customview.customviewgroup.flowlayout.FlowLayoutActivity" />
-        <activity android:name=".viewevent.outfun.OutFunActivity" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".attr.AttrTestActivity"/>
+        <activity android:name=".customview.customtextview.CustomTextViewActivity"/>
+        <activity android:name=".customview.customimageview.CustomImageViewActivity"/>
+        <activity android:name=".customview.CustomViewActivity"/>
+        <activity android:name=".customview.customcircleview.CustomCircleActivity"/>
+        <activity android:name=".customview.customviewgroup.rectviewgroup.CusRectGroupActivity"/>
+        <activity android:name=".customview.customviewgroup.flowlayout.layoutparams.LayoutParamsTestActivity"/>
+        <activity android:name=".customview.customviewgroup.flowlayout.FlowLayoutActivity"/>
+        <activity android:name=".viewevent.outfun.OutFunActivity"/>
         <activity
             android:name=".viewevent.viewheight.ViewHeightActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
-        <activity android:name=".viewevent.customveiweventtest.ViewEventTestActivity" />
-        <activity android:name=".viewevent.touchdelegate.TouchDelegateViewEventTestActivity" />
-        <activity android:name=".viewevent.touchdelegate.StandardTouchActivity1" />
-        <activity android:name=".viewevent.touchdelegate.StandardTouchActivity2" />
-        <activity android:name=".viewevent.infun.InFunActivity" />
-        <activity android:name=".viewevent.ViewEventActivity" />
-        <activity android:name=".viewevent.touchdelegate.TouchDelegateActivity" />
-        <activity android:name=".notification.NotificationTestActivity" />
-        <activity android:name=".toolbar.ToolBarTestActivity" />
-        <activity android:name=".toolbar.ToolBarExtendBaseToolBarActivity1" />
-        <activity android:name=".toolbar.ToolBarExtendBaseToolBarActivity2" />
-        <activity android:name=".toolbar.custom_title.BaseCustomTitleActivity" />
-        <activity android:name=".toolbar.custom_title.CustomTitleActivity1" />
-        <activity android:name=".toolbar.custom_title.CustomTitleActivity2" />
-        <activity android:name=".toolbar.CommonActivity" />
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
+        <activity android:name=".viewevent.customveiweventtest.ViewEventTestActivity"/>
+        <activity android:name=".viewevent.touchdelegate.TouchDelegateViewEventTestActivity"/>
+        <activity android:name=".viewevent.touchdelegate.StandardTouchActivity1"/>
+        <activity android:name=".viewevent.touchdelegate.StandardTouchActivity2"/>
+        <activity android:name=".viewevent.infun.InFunActivity"/>
+        <activity android:name=".viewevent.ViewEventActivity"/>
+        <activity android:name=".viewevent.touchdelegate.TouchDelegateActivity"/>
+        <activity android:name=".notification.NotificationTestActivity"/>
+        <activity android:name=".toolbar.ToolBarTestActivity"/>
+        <activity android:name=".toolbar.ToolBarExtendBaseToolBarActivity1"/>
+        <activity android:name=".toolbar.ToolBarExtendBaseToolBarActivity2"/>
+        <activity android:name=".toolbar.custom_title.BaseCustomTitleActivity"/>
+        <activity android:name=".toolbar.custom_title.CustomTitleActivity1"/>
+        <activity android:name=".toolbar.custom_title.CustomTitleActivity2"/>
+        <activity android:name=".toolbar.CommonActivity"/>
         <activity
             android:name=".drawer_layout.DrawerLayoutActivity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".window.WindowTestActivity" />
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".window.WindowTestActivity"/>
 
         <receiver android:name=".widget.TimerWidgetProvider">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
                 <!-- 自定义action -->
-                <action android:name="com.stone.action.start" />
+                <action android:name="com.stone.action.start"/>
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/timer_widget_provider" />
+                android:resource="@xml/timer_widget_provider"/>
             <!-- android:resource="" 定义了Widget的信息使用timer_widget_provider.xml描述 -->
         </receiver>
 
-        <service android:name=".widget.TimerWidgetService" />
+        <service android:name=".widget.TimerWidgetService"/>
 
         <!-- 声明widget对应的AppWidgetProvider -->
         <receiver android:name=".widget.ExampleAppWidgetProvider">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.skywang.widget.UPDATE_ALL" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.skywang.widget.UPDATE_ALL"/>
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/example_appwidget_info" />
+                android:resource="@xml/example_appwidget_info"/>
         </receiver>
 
         <service android:name=".widget.ExampleAppWidgetService">
             <intent-filter>
-                <action android:name="android.appwidget.action.EXAMPLE_APP_WIDGET_SERVICE" />
+                <action android:name="android.appwidget.action.EXAMPLE_APP_WIDGET_SERVICE"/>
             </intent-filter>
         </service>
 
-        <activity android:name=".widget.AppWidgetConfigureActivity" />
-        <activity android:name=".list.gridview.GridViewActivity" >
-
+        <activity android:name=".widget.AppWidgetConfigureActivity"/>
+        <activity android:name=".list.gridview.GridViewActivity">
         </activity>
-
-        <activity android:name=".list.ListActivity" />
-        <activity android:name=".list.recycleview.RecycleViewActivity" />
-        <activity android:name=".list.listview.ListViewActivity" />
-        <activity android:name=".list.listview.ResArraysActivity" />
-        <activity android:name=".list.listview.ArrayAdapterActivity" />
-        <activity android:name=".list.listview.ExtendListActivityActivity" />
-        <activity android:name=".list.listview.SimpleAdapterActivity" />
-        <activity android:name=".list.listview.custom_adapter.CustomAdapterActivity" />
-        <activity android:name=".drawable.DrawableTestActivity" />
-        <activity android:name=".imageloader.ImageLoaderActivity" />
-        <activity android:name=".imageloader.LruCacheTestActivity"></activity>
+        <activity android:name=".list.ListActivity"/>
+        <activity android:name=".list.recycleview.RecycleViewActivity"/>
+        <activity android:name=".list.listview.ListViewActivity"/>
+        <activity android:name=".list.listview.ResArraysActivity"/>
+        <activity android:name=".list.listview.ArrayAdapterActivity"/>
+        <activity android:name=".list.listview.ExtendListActivityActivity"/>
+        <activity android:name=".list.listview.SimpleAdapterActivity"/>
+        <activity android:name=".list.listview.custom_adapter.CustomAdapterActivity"/>
+        <activity android:name=".drawable.DrawableTestActivity"/>
+        <activity android:name=".imageloader.ImageLoaderActivity"/>
+        <activity android:name=".imageloader.LruCacheTestActivity"/>
         <activity android:name=".imageloader.DiskLruCacheActivity">
-
         </activity>
         <activity android:name=".imageloader.photowall.PhotoWallActivity">
-           
         </activity>
-
         <activity android:name=".bitmap.BitmapActivity">
-
         </activity>
-        
         <activity android:name=".viewpager.FragmentStateActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            
+        </activity>
+        <activity android:name=".fragment.FragmentCommitTestActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
         </activity>
     </application>
 
